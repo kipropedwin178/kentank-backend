@@ -19,7 +19,6 @@ app = FastAPI(
     version="1.0.0",
 )
 
-
 # ============================================================
 # CORS CONFIGURATION
 # ============================================================
@@ -29,7 +28,13 @@ app.add_middleware(
     allow_origins=[
         "http://localhost:5173",
         "http://127.0.0.1:5173",
+
+        # Render frontend
         "https://kentank-frontend.onrender.com",
+
+        # Custom domain
+        "https://kentankdeliveriesnumber.co.ke",
+        "https://www.kentankdeliveriesnumber.co.ke",
     ],
     allow_credentials=True,
     allow_methods=["*"],
